@@ -10,7 +10,7 @@ function NavLinks({ links } : NavLinksProps) {
         </div>
         <ul className="navLinks">
             {links.map((link, index) => (
-                <li key={index}>
+                <li className="listItem" key={index}>
                     <a>{link}</a>
                 </li>
             ))}

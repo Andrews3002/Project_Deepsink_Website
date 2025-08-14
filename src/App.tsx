@@ -1,6 +1,6 @@
 import NavLinks from "./components/NavLinks";
 
-const links = ['Home', 'About', 'Topic1', 'Topic2', 'Topic3', 'Topic4']; 
+const links = ['Home', 'About Us', 'Research Topics', 'Contact Us']; 
 
 function App() {
   return (
@@ -9,6 +9,9 @@ function App() {
         <NavLinks links={links} />
       </nav>
       <div className="liveParticleBackground">
+        <div id="gradientSource">
+
+        </div>
         <div id="homeSection">
           <h1>Project Deepsink</h1>
           <p>Welcome to our website, below you will find information on our preposition. Each topic below should give you insight into why you should invest in our initiative</p>
