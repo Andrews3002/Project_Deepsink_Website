@@ -8,6 +8,14 @@
     z-index: 1;
 }
 
+html{
+    font-size: 12px;
+}
+
+html, body, #root {
+    height: 100vh;
+}
+
 body{
     position: relative;
     display: flex;
@@ -15,7 +23,7 @@ body{
 }
 
 .navbar{
-    position: fixed;
+    position: sticky;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -55,4 +63,51 @@ body{
     justify-content: center;
     gap: 10%;
     list-style: none;
+}
+
+.liveParticleBackground{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+    background: #111111;
+}
+
+#root{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#homeSection{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 10%;
+    height: 100%;
+    width: 100%;
+    border: 3px solid white;
+    color : white;
+    background: transparent;
+}
+
+
+#homeSection h1{
+    font-size: 10rem;
+    font-weight: 700;
+}
+
+#homeSection p{
+    font-size: 2rem;
+    text-align: center;
+    width: 50%;
 }
