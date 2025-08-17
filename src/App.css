@@ -6,15 +6,17 @@
     font-weight: 400;
     font-style: normal;
     z-index: 1;
-    --main-color: #050149;
-    --secondary-color: #52d0da;
+    --main-color: #01332c;
+    --secondary-color: #67d303;
     --accent-color: #67d303;
-    --background-color: #0c0c0c;
+    --black: #000000;
+    --white: #ffffff;
 }
 
 html, body, #root {
     height: 100vh;
-    background: linear-gradient(var(--background-color), var(--main-color));
+    background: linear-gradient(var(--black), var(--main-color));
+    z-index: -1;
 }
 
 body{
@@ -38,10 +40,13 @@ body{
 .logoDiv{
     position: relative;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100%;
-    width: 20%;
+    width: 65%;
+    padding-left: 4%;
+    gap: 4%;
 }
 
 .logo{
@@ -49,32 +54,172 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 1 / 0.3;
-    width: 45%;
-    border: 3px solid white
+    aspect-ratio: 1 / 1;
+    width: 5%;
+}
+
+.logoTitleDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+    gap: 2%;
+}
+
+.logoText{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+    padding-left: 2%;
+}
+
+#titleLastWord{
+    color: var(--accent-color);
 }
 
 .navLinks{
     position: absolute;
     height: 100%;
-    width: 60%;
+    width: 35%;
     top: 0;
-    right: 0%;
+    right: 2%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 12%;
+    justify-content: space-between;
     list-style: none;
-    font-size: 1.4rem;
-    color: white;
+    font-size: 1.1rem;
+    color: var(--white)
 }
 
-.navLinks li{
+.navLinks a {
     position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    width: 100%;
+    transition: color 0.3s ease-in-out;
+}
+
+.defaultLink, 
+.dropdownMenu{
+    height: 100%;
+    width: 25%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:5%;
+}
+
+.dropdownMenu{
     flex-direction: column;
-    justify-content: space-between;
+}
+
+.dropdownMenuDiv{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.dropdownMenuDiv a{
+    transition : color 0.3s ease-in-out;
+}
+
+.dropdownContainer{
+    position: absolute;
+    top: 70%;
+    left: 0;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 107%;
+    height: 0px;
+    background-color: var(--secondary-color);
+    border-radius: 0px 0px 10px 10px;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+
+.dropdownMenu:hover .dropdownContainer{
+    padding: 2%;
+    height: 150px;
+}
+
+.dropdownMenu:hover .dropdownArrow{
+    transform: rotate(180deg);
+}
+
+.dropdownMenu:hover .dropdownLinks{
+    display: flex;
+}
+
+.dropdownLinks{
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+}
+
+.dropdownLinks li{
+    text-decoration: none;
+    color: var(--background-color);
+    padding: 7% 0% 7% 0%;
+}
+
+.dropdownLinks li:first-child{
+    padding-top: 0%;
+}
+
+.dropdownLinks li:last-child{
+    padding-bottom: 0%;
+}
+
+.defaultLink::before {
+    content: '';
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 30%;
+    left: 10%;
+    width: 80%;
+    height: 40%;
+    background-color: var(--secondary-color);
+    transform: scale(0);
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.defaultLink:hover::before{
+    transform: scale(1);
+}
+
+.defaultLink:hover a{
+    color: var(--black);
+}
+
+.dropdownArrow{
+    height: 12%;
+    width: 9%;
+    transition: all 0.3s ease-in-out;
 }
 
 .liveParticleBackground{
@@ -85,9 +230,9 @@ body{
     align-items: center;
     height: 90%;
     width: 100%;
-    background: transparent
+    background: transparent;
+    z-index: -1;
 }
-
 
 #root{
     position: relative;
@@ -96,15 +241,6 @@ body{
     height: 100%;
     width: 100%;
     overflow: hidden;
-}
-
-#gradientSource{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2%;
-    border-radius: 30%;
 }
 
 #homeSection{
