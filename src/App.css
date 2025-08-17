@@ -75,7 +75,7 @@ body{
     padding-left: 2%;
 }
 
-#titleLastWord{
+.accentText{
     color: var(--accent-color);
 }
 
@@ -178,7 +178,7 @@ body{
 
 .dropdownLinks li{
     text-decoration: none;
-    color: var(--background-color);
+    color: var(--black);
     padding: 7% 0% 7% 0%;
 }
 
@@ -249,7 +249,6 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-content: center;
     gap: 10%;
     height: 100%;
     width: 100%;
@@ -257,10 +256,32 @@ body{
     background: transparent;
 }
 
+.homeTitleLine{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    gap: 2%;
+}
+
+.homeTitleDiv{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 #homeSection h1{
-    font-size: 10rem;
+    width: auto;
+    font-size: 8rem;
     font-weight: 700;
     background: transparent;
+    text-align: center;
 }
 
 #homeSection p{
