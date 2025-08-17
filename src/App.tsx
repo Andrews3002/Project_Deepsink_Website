@@ -7,10 +7,109 @@ const topics = ['Topic 1', 'Topic 2', 'Topic 3'];
 function App() {
   return (
     <>
+      <div className = "particleContainer">
+        <div className = "particle" style={{ ["--i" as any]: 27 }}>
+          <div className="atom1"></div>
+          <div className="stem1"></div>
+          <div className="centerAtom"></div>
+          <div className="stem2"></div>
+          <div className="atom2"></div>
+        </div>
+        <div className = "particle" style={{ ["--i" as any]: 10 }}>
+          <div className="atom1"></div>
+          <div className="stem1"></div>
+          <div className="centerAtom"></div>
+          <div className="stem2"></div>
+          <div className="atom2"></div>
+        </div>
+        <div className = "particle" style={{ ["--i" as any]: 34 }}>
+          <div className="atom1"></div>
+          <div className="stem1"></div>
+          <div className="centerAtom"></div>
+          <div className="stem2"></div>
+          <div className="atom2"></div>
+        </div>
+        <div className = "particle" style={{ ["--i" as any]: 26 }}>
+          <div className="atom1"></div>
+          <div className="stem1"></div>
+          <div className="centerAtom"></div>
+          <div className="stem2"></div>
+          <div className="atom2"></div>
+        </div>
+        <div className = "particle" style={{ ["--i" as any]: 23 }}>
+          <div className="atom1"></div>
+          <div className="stem1"></div>
+          <div className="centerAtom"></div>
+          <div className="stem2"></div>
+          <div className="atom2"></div>
+        </div>
+        <div className = "particle" style={{ ["--i" as any]: 14 }}>
+          <div className="atom1"></div>
+          <div className="stem1"></div>
+          <div className="centerAtom"></div>
+          <div className="stem2"></div>
+          <div className="atom2"></div>
+        </div>
+        <div className = "particle" style={{ ["--i" as any]: 32 }}>
+          <div className="atom1"></div>
+          <div className="stem1"></div>
+          <div className="centerAtom"></div>
+          <div className="stem2"></div>
+          <div className="atom2"></div>
+        </div>
+        <div className = "particle" style={{ ["--i" as any]: 26 }}>
+          <div className="atom1"></div>
+          <div className="stem1"></div>
+          <div className="centerAtom"></div>
+          <div className="stem2"></div>
+          <div className="atom2"></div>
+        </div>
+        <div className = "particle" style={{ ["--i" as any]: 29 }}>
+          <div className="atom1"></div>
+          <div className="stem1"></div>
+          <div className="centerAtom"></div>
+          <div className="stem2"></div>
+          <div className="atom2"></div>
+        </div>
+        <div className = "particle" style={{ ["--i" as any]: 36 }}>
+          <div className="atom1"></div>
+          <div className="stem1"></div>
+          <div className="centerAtom"></div>
+          <div className="stem2"></div>
+          <div className="atom2"></div>
+        </div>
+        <div className = "particle" style={{ ["--i" as any]: 21 }}>
+          <div className="atom1"></div>
+          <div className="stem1"></div>
+          <div className="centerAtom"></div>
+          <div className="stem2"></div>
+          <div className="atom2"></div>
+        </div>
+        <div className = "particle" style={{ ["--i" as any]: 12 }}>
+          <div className="atom1"></div>
+          <div className="stem1"></div>
+          <div className="centerAtom"></div>
+          <div className="stem2"></div>
+          <div className="atom2"></div>
+        </div>
+        <div className = "particle" style={{ ["--i" as any]: 34 }}>
+          <div className="atom1"></div>
+          <div className="stem1"></div>
+          <div className="centerAtom"></div>
+          <div className="stem2"></div>
+          <div className="atom2"></div>
+        </div>
+        <div className = "particle" style={{ ["--i" as any]: 32 }}>
+          <div className="atom1"></div>
+          <div className="stem1"></div>
+          <div className="centerAtom"></div>
+          <div className="stem2"></div>
+          <div className="atom2"></div>
+        </div>
+      </div>
       <nav className="navbar">
         <NavLinks links={links} topics={topics} />
-      </nav>
-      
+      </nav>      
       <div id="homeSection">
         <div className="homeTitleDiv">
           <div className="homeTitleLine">
