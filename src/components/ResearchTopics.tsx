@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 interface ResearchTopic {
   id: number;
@@ -26,9 +26,9 @@ function ResearchTopics({ topics }: ResearchTopicsProps) {
             />
             <h2>{topic.title}</h2>
             <p>{topic.summary}</p>
-            <a href={topic.detailLink} className="detail-link">
+            <Link to={topic.detailLink} className="detail-link">
               Read More
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

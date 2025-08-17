@@ -136,16 +136,23 @@ body, #root {
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
+    flex-direction: column;
 }
 
 .topic-card {
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    width: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10;
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
+    width: auto;
+    height: auto;
     padding: 1.5rem;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    overflow: visible;
 }
 
 .topic-card:hover {
@@ -175,4 +182,27 @@ body, #root {
 .detail-link:hover {
     background: var(--accent-color);
     color: var(--main-color);
+}
+
+/* Research Detail Page */
+.research-detail {
+    min-height: 100vh;
+    padding: 5% 10%;
+    
+    color: white;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10;
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
+    width: auto;
+    height: auto;
+    margin-top: 70px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 70px;
 }
