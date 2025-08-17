@@ -1,12 +1,83 @@
+import React, { useRef, useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavLinks from "./components/NavLinks";
-import './App.css';
+
+import ResearchTopics from "./components/ResearchTopics";
+import ResearchDetail from "./components/ResearchDetail";
+import Mission from "./components/Mission";
+import Contactus from "./components/ContactUs";
+
+const links = [
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/about-us" },
+  { name: "Research Topics", path: "/research-topics" },
+  { name: "Mission", path: "/mission" },
+  { name: "Contact Us", path: "/contact-us" },
+];
+
+const researchTopics = [
+  { id: 1, title: "Carbon Capture", summary: "Techniques for capturing CO₂ 7777777777777777777777777777777.", imageUrl: "/images/carbon_capture.jpg", detailLink: "/research/1" },
+  { id: 2, title: "Deep Sink Storage", summary: "Long-term storage strategies.", imageUrl: "/images/deep_sink.jpg", detailLink: "/research/2" },
+  { id: 3, title: "Monitoring Systems", summary: "Sensors and AI to track stored carbon safely.", imageUrl: "/images/monitoring.jpg", detailLink: "/research/3" },
+  { id: 4, title: "Monitoring Systems", summary: "Sensors and AI to track stored carbon safely.", imageUrl: "/images/monitoring.jpg", detailLink: "/research/4" },
+  { id: 5, title: "Monitoring Systems", summary: "Sensors and AI to track stored carbon safely.", imageUrl: "/images/monitoring.jpg", detailLink: "/research/5" },
+  { id: 6, title: "Monitoring Systems", summary: "Sensors and AI to track stored carbon safely.", imageUrl: "/images/monitoring.jpg", detailLink: "/research/6" },
+  { id: 7, title: "Monitoring Systems", summary: "Sensors and AI to track stored carbon safely.", imageUrl: "/images/monitoring.jpg", detailLink: "/research/7" },
+  { id: 8, title: "Monitoring Systems", summary: "Sensors and AI to track stored carbon safely.", imageUrl: "/images/monitoring.jpg", detailLink: "/research/8" },
+];
+
+<!-- import './App.css';
 
 const links = ['Home', 'About Us', 'Research Topics', 'Contact Us']; 
-const topics = ['Topic 1', 'Topic 2', 'Topic 3'];
+const topics = ['Topic 1', 'Topic 2', 'Topic 3']; -->
 
 function App() {
   return (
-    <>
+    <Router>
+      {showNav && (
+        <nav className="navbar">
+          <NavLinks links={links} />
+        </nav>
+      )}
+
+      <Routes>
+        {/* Home Section */}
+        <Route
+          path="/"
+          element={
+            <>
+              <div className="liveParticleBackground">
+                <div id="gradientSource"></div>
+                <div id="homeSection">
+                  <h1>Project Deepsink</h1>
+                  <p>Welcome to our website. Scroll down to learn more about our initiative.</p>
+                  <div
+                    className="scrollArrow"
+                    onClick={() => researchRef.current?.scrollIntoView({ behavior: "smooth" })}
+                  >
+                    &#x2193;
+                  </div>
+                </div>
+              </div>
+              <div ref={researchRef} id="researchsection">
+                <ResearchTopics topics={researchTopics} />
+              </div>
+            </>
+          }
+        />
+
+        {/* Research Detail Section */}
+        <Route path="/research/:id" element={<ResearchDetail />} />
+
+        {/* Mission Page */}
+        <Route path="/mission" element={<Mission />} />
+
+        {/* Contact Us Page */}
+        <Route path="/contact-us" element={<Contactus />} />
+      </Routes>
+    </Router>
+        
+<!--     <>
       <div className = "particleContainer">
         <div className = "particle" style={{ ["--i" as any]: 27 }}>
           <div className="atom1"></div>
@@ -144,7 +215,7 @@ function App() {
           should invest in our initiative
         </p>
       </div>
-    </>
+    </> -->
   );
 }
 
