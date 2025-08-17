@@ -7,15 +7,19 @@
     font-style: normal;
     z-index: 1;
     --main-color: #01332c;
-    --secondary-color: #67d303;
     --accent-color: #67d303;
-    --black: #000000;
-    --white: #ffffff;
+    --contrast1: #ffffff;
+    --contrast2: #000000;
 }
 
-html, body, #root {
-    height: 100vh;
-    background: linear-gradient(var(--black), var(--main-color));
+html{
+    font-size: 15px;
+}
+
+html, body, #root{
+    height: auto;
+    width: 100%;
+    background: linear-gradient(var(--contrast2), var(--main-color));
     z-index: -1;
 }
 
@@ -26,15 +30,17 @@ body{
 }
 
 .navbar{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 10%;
+    height: 100px;
     width: 100%;
-    background: transparent;
+    backdrop-filter: blur(30px);
+    background: rgba(0, 0, 0, 0.247);
+    z-index: 500;
 }
 
 .logoDiv{
@@ -44,9 +50,8 @@ body{
     align-items: center;
     justify-content: flex-start;
     height: 100%;
-    width: 65%;
     padding-left: 4%;
-    gap: 4%;
+    gap: 19%;
 }
 
 .logo{
@@ -55,7 +60,7 @@ body{
     justify-content: center;
     align-items: center;
     aspect-ratio: 1 / 1;
-    width: 5%;
+    width: 60px;
 }
 
 .logoTitleDiv{
@@ -63,26 +68,115 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 20%;
-    gap: 2%;
+    height: auto;
+    width: 200px;
 }
 
 .logoText{
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--white);
+    color: var(--contrast1);
     padding-left: 2%;
 }
 
+.logoTitleDiv p{
+    width: 100%;
+}
 .accentText{
     color: var(--accent-color);
 }
 
+.mobileNavLinks{
+    position: fixed;
+    top: 0;
+    right: -810px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    width: 70%;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.534);
+    border-radius: 30px 0px 0px 30px;
+    box-shadow: -10px 0px 30px rgba(0, 0, 0);
+    backdrop-filter: blur(10px);
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.mobileNavLinks.navActive{
+    right: 0px;
+}
+
+.mobileNavLink{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 60px;
+    padding-left: 30px;
+}
+
+.mobileNavLink a{
+    text-decoration: none;
+    color: var(--contrast2);
+    transition: color 0.3s ease-in-out;
+}
+
+.mobileNavLink:hover{
+    background-color: var(--contrast1);
+}
+
+.burgerMenuDiv{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60px;
+    gap: 10px;
+    right: 2%;
+    z-index: 999;
+}
+
+.burgerMenuDiv:hover{
+    cursor: pointer;
+}
+
+.burgerBar{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 8px;
+    width: 100%;
+    border-radius: 30px;
+    background: var(--accent-color);
+    transition: all 0.3s ease-in-out;
+}
+
+#bar2.active{
+    opacity: 0;
+}
+
+#bar1.active{
+    transform: rotate(45deg) translateY(13px) translateX(12px);
+}
+
+#bar3.active{
+    transform: rotate(-45deg) translateY(-13px) translateX(12px);
+}
+
+
 .navLinks{
     position: absolute;
     height: 100%;
-    width: 35%;
+    width: 650px;
     top: 0;
     right: 2%;
     display: flex;
@@ -91,7 +185,7 @@ body{
     justify-content: space-between;
     list-style: none;
     font-size: 1.1rem;
-    color: var(--white)
+    color: var(--contrast1)
 }
 
 .navLinks a {
@@ -147,7 +241,7 @@ body{
     align-items: center;
     width: 107%;
     height: 0px;
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
     border-radius: 0px 0px 10px 10px;
     z-index: -1;
     transition: all 0.3s ease-in-out;
@@ -178,7 +272,7 @@ body{
 
 .dropdownLinks li{
     text-decoration: none;
-    color: var(--black);
+    color: var(--contrast2);
     padding: 7% 0% 7% 0%;
 }
 
@@ -201,7 +295,7 @@ body{
     left: 10%;
     width: 80%;
     height: 40%;
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
     transform: scale(0);
     border-radius: 30px;
     transition: all 0.3s ease-in-out;
@@ -213,7 +307,7 @@ body{
 }
 
 .defaultLink:hover a{
-    color: var(--black);
+    color: var(--contrast2);
 }
 
 .dropdownArrow{
@@ -222,25 +316,15 @@ body{
     transition: all 0.3s ease-in-out;
 }
 
-.liveParticleBackground{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 90%;
-    width: 100%;
-    background: transparent;
-    z-index: -1;
-}
 
 #root{
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 100%;
-    overflow: hidden;
 }
 
 #homeSection{
@@ -249,10 +333,10 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10%;
-    height: 100%;
+    gap: 0%;
+    height: 100vh;
     width: 100%;
-    color : white;
+    color : var(--contrast1);
     background: transparent;
 }
 
@@ -271,13 +355,14 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: center;;
     width: 100%;
 }
 
 #homeSection h1{
     width: auto;
+    height: auto;
     font-size: 8rem;
     font-weight: 700;
     background: transparent;
@@ -285,8 +370,124 @@ body{
 }
 
 #homeSection p{
-    font-size: 2rem;
+    font-size: 1.2rem;
     text-align: center;
     width: 50%;
+    height: 10%;
     background: transparent;
+    padding-right: 2%;
+}
+
+@media (min-width: 1080px) {
+    .mobileNavLinks{
+        display: none !important;
+    }
+}
+
+@media (max-width: 1080px) {
+    .navLinks {
+        display: none !important;
+    }
+    .burgerMenuDiv {
+        display: flex !important;
+    }
+
+    .homeTitleLine{
+        justify-content: flex-start;
+        margin-left: 10%;
+    }
+
+    #homeSection{
+        width: 800px;
+    }
+
+    #homeSection p{
+        text-align: start;
+        width: 100%;
+        margin-left: 10%;
+    }
+
+    #homeSection h1{
+        font-size: 7rem;
+    }
+}
+
+@media (max-width: 850px) {
+    #homeSection{
+        width: 700px;
+    }
+
+    #homeSection p{
+        font-size: 1rem;
+    }
+
+    #homeSection h1{
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 730px) {
+    #homeSection{
+        width: 550px;
+    }
+
+    #homeSection p{
+        font-size: 0.9rem;
+    }
+
+    #homeSection h1{
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 610px) {
+    #homeSection{
+        width: 450px;
+        justify-content: flex-start;
+        margin-top: 150px;
+    }
+
+    #homeSection p{
+        font-size: 0.7rem;
+    }
+
+    #homeSection h1{
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 496px) {
+    #homeSection{
+        width: 350px;
+    }
+
+    #homeSection p{
+        font-size: 0.6rem;
+    }
+
+    #homeSection h1{
+        font-size: 3rem;
+    }
+
+    .logoTitleDiv{
+        display: none;
+    }
+}
+
+@media (max-width: 360px) {
+    #homeSection{
+        width: 230px;
+    }
+
+    #homeSection p{
+        font-size: 0.4rem;
+    }
+
+    #homeSection h1{
+        font-size: 2rem;
+    }
+
+    .logoTitleDiv{
+        display: none;
+    }
 }
