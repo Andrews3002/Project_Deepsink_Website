@@ -3,8 +3,16 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavLinks from "./components/NavLinks";
 import ResearchTopics from "./components/ResearchTopics";
 import ResearchDetail from "./components/ResearchDetail";
+import Mission from "./components/Mission";
+import Contactus from "./components/ContactUs";
 
-const links = ['Home', 'About Us', 'Research Topics', 'Mission', 'Contact Us'];
+const links = [
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/about-us" },
+  { name: "Research Topics", path: "/research-topics" },
+  { name: "Mission", path: "/mission" },
+  { name: "Contact Us", path: "/contact-us" },
+];
 
 const researchTopics = [
   { id: 1, title: "Carbon Capture", summary: "Techniques for capturing CO₂ 7777777777777777777777777777777.", imageUrl: "/images/carbon_capture.jpg", detailLink: "/research/1" },
@@ -72,6 +80,12 @@ function App() {
 
         {/* Research Detail Section */}
         <Route path="/research/:id" element={<ResearchDetail />} />
+
+        {/* Mission Page */}
+        <Route path="/mission" element={<Mission />} />
+
+        {/* Contact Us Page */}
+        <Route path="/contact-us" element={<Contactus />} />
       </Routes>
     </Router>
   );

@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
 interface NavLinksProps {
-    links: string[];
+  links: { name: string; path: string }[];
 }
+
+
 
 function NavLinks({ links } : NavLinksProps) {
     return (
@@ -11,7 +14,7 @@ function NavLinks({ links } : NavLinksProps) {
         <ul className="navLinks">
             {links.map((link, index) => (
                 <li className="listItem" key={index}>
-                    <a>{link}</a>
+                    <Link to={link.path}>{link.name}</Link>
                 </li>
             ))}
         </ul>

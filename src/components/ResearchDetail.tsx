@@ -5,6 +5,11 @@ const researchTopics = [
   { id: 1, title: "Carbon Capture", summary: "Techniques for capturing CO₂.", imageUrl: "/images/carbon_capture.jpg", detail: "Detailed information about Carbon Capture." },
   { id: 2, title: "Deep Sink Storage", summary: "Long-term storage strategies.", imageUrl: "/images/deep_sink.jpg", detail: "Detailed information about Deep Sink Storage." },
   { id: 3, title: "Monitoring Systems", summary: "Sensors and AI to track stored carbon safely.", imageUrl: "/images/monitoring.jpg", detail: "Detailed information about Monitoring Systems." },
+  { id: 4, title: "Monitoring Systems", summary: "Sensors and AI to track stored carbon safely.", imageUrl: "/images/monitoring.jpg", detail: "Detailed information about Monitoring Systems." },
+  { id: 5, title: "Monitoring Systems", summary: "Sensors and AI to track stored carbon safely.", imageUrl: "/images/monitoring.jpg", detail: "Detailed information about Monitoring Systems." },
+  { id: 6, title: "Monitoring Systems", summary: "Sensors and AI to track stored carbon safely.", imageUrl: "/images/monitoring.jpg", detail: "Detailed information about Monitoring Systems." },
+  { id: 7, title: "Monitoring Systems", summary: "Sensors and AI to track stored carbon safely.", imageUrl: "/images/monitoring.jpg", detail: "Detailed information about Monitoring Systems." },
+  { id: 8, title: "Monitoring Systems", summary: "Sensors and AI to track stored carbon safely.", imageUrl: "/images/monitoring.jpg", detail: "Detailed information about Monitoring Systems." },
 ];
 
 function ResearchDetail() {
