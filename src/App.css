@@ -347,7 +347,7 @@ html, body, #root{
 #homeSection{
     position: relative;
     height: 100vh;
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -466,7 +466,7 @@ html, body, #root{
 
 .topic-card img {
     aspect-ratio: 1/1;
-    height: 800px;
+    height: 90%;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 1rem;
@@ -475,7 +475,23 @@ html, body, #root{
 
 .cardDetailsDiv{
     width: 40%;
-    transform: scale(2);
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardDetailsDiv h2{
+    font-size: 3rem;
+}
+
+.cardDetailsDiv p{
+    font-size: 1.5rem;
+}
+
+.cardDetailsDiv a{
+    transform: scale(1);
 }
 
 .detail-link {
@@ -782,82 +798,6 @@ html, body, #root{
     }
 }
 
-@media (max-width: 2422px) {
-    .topic-card img {
-        aspect-ratio: 1/1;
-        height: 800px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 1rem;
-        border: 3px solid var(--contrast2) ;
-    }
-
-    .cardDetailsDiv{
-        transform: scale(1.5);
-    }
-}
-
-@media (max-width: 1998px) {
-    .topic-card img {
-        aspect-ratio: 1/1;
-        height: 400px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 1rem;
-        border: 3px solid var(--contrast2) ;
-    }
-
-    .cardDetailsDiv{
-        transform: scale(1);
-    }
-}
-
-@media (max-width: 1282px) {
-    .topic-card img {
-        aspect-ratio: 1/1;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 1rem;
-        border: 3px solid var(--contrast2) ;
-    }
-
-    .cardDetailsDiv{
-        transform: scale(1);
-    }
-}
-
-@media (max-width: 970px) {
-    .topic-card img {
-        aspect-ratio: 1/1;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 1rem;
-        border: 3px solid var(--contrast2) ;
-    }
-
-    .cardDetailsDiv{
-        transform: scale(0.7);
-    }
-}
-
-@media (max-width: 662) {
-    .topic-card img {
-        aspect-ratio: 1/1;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 1rem;
-        border: 3px solid var(--contrast2) ;
-    }
-
-    .cardDetailsDiv{
-        transform: scale(0.6);
-    }
-}
-
-
 @media (min-width: 1169px) {
     .mobileNavLinks{
         display: none !important;
@@ -874,7 +814,6 @@ html, body, #root{
 
     .homeTitleLine{
         justify-content: flex-start;
-        margin-left: 10%;
     }
 
     #homeSection{
@@ -887,10 +826,18 @@ html, body, #root{
         display: none;
     }
 
+    .topic-card img {
+        display: none;
+    }
+
+    .cardDetailsDiv{
+        width: 80%;
+    }
+
     #homeSection p{
         text-align: start;
         width: 100%;
-        margin-left: 10%;
+        padding-right: 12%;
     }
 
     #homeSection h1{
@@ -899,6 +846,20 @@ html, body, #root{
 
     .particle:nth-child(n + 8){
         display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .cardDetailsDiv h2{
+    font-size: 2.5rem;
+    }
+
+    .cardDetailsDiv p{
+        font-size: 1rem;
+    }
+
+    .cardDetailsDiv a{
+        transform: scale(1);
     }
 }
 
@@ -936,10 +897,27 @@ html, body, #root{
         justify-content: flex-start;
         margin-top: 150px;
         height: 10vh;
+        margin-bottom: 50px;
+    }
+
+    .cardDetailsDiv h2{
+    font-size: 2.2rem;
+    }
+
+    .cardDetailsDiv p{
+        font-size: 0.8rem;
+    }
+
+    .cardDetailsDiv a{
+        transform: scale(1);
+    }
+
+    .research-topics {
+        gap: 2rem;
     }
 
     .section-title{
-        scale: 0.4;
+        font-size: 2rem;
         width: auto;
     }
 
@@ -961,6 +939,11 @@ html, body, #root{
         width: 350px;
     }
 
+    .section-title{
+        font-size: 1.2rem;
+        width: auto;
+    }
+
     #homeSection p{
         font-size: 0.6rem;
     }
@@ -972,11 +955,29 @@ html, body, #root{
     .logoTitleDiv{
         display: none;
     }
+
+    .cardDetailsDiv h2{
+    font-size: 1.2rem;
+    }
+
+    .cardDetailsDiv p{
+        font-size: 0.6rem;
+    }
+
+    .cardDetailsDiv a{
+        transform: scale(1);
+    }
 }
 
 @media (max-width: 360px) {
     #homeSection{
         width: 230px;
+        height: 5vh;
+    }
+
+    .section-title{
+        font-size: 0.6rem;
+        width: auto;
     }
 
     #homeSection p{
