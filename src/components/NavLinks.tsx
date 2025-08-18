@@ -41,7 +41,7 @@ function NavLinks({ links, topics }: NavLinksProps) {
     return (
         <>
             <div className="logoDiv">
-                <img src="/src/assets/Logo.svg" alt="Logo" className="logo" />
+                <img src="../src/assets/Logo.svg" alt="Logo" className="logo" />
                 <div className="logoTitleDiv">
                     <p className="logoText">Project</p>
                     <p className="logoText accentText">DeepSink</p>
