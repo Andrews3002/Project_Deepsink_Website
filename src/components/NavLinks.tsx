@@ -11,7 +11,7 @@ const addNavLink = (topics: { id: number; title: string; summary: string; imageU
         <li className="dropdownMenu" key={index}>
             <div className="dropdownMenuDiv">
                 <a href={"#"}>{link.name}</a>
-                <img src="/src/assets/WhiteDropdownArrow.svg" alt="Dropdown Arrow" className="dropdownArrow"/>
+                <img src="/WhiteDropdownArrow.svg" alt="Dropdown Arrow" className="dropdownArrow"/>
             </div>
 
             <div className="dropdownContainer">
