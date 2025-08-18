@@ -50,8 +50,9 @@ html, body, #root{
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    width: 350px;
     height: 100%;
-    padding-left: 4%;
+    margin-left: 4%;
     gap: 19%;
 }
 
@@ -140,7 +141,7 @@ html, body, #root{
     height: 100%;
     width: 60px;
     gap: 10px;
-    right: 2%;
+    right: 4%;
     z-index: 999;
 }
 
@@ -178,7 +179,7 @@ html, body, #root{
     height: 100%;
     width: 750px;
     top: 0;
-    right: 2%;
+    right: 4%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -385,13 +386,12 @@ html, body, #root{
 /* Research Section */
 #researchsection {
     position: relative;
-    min-height: 100vh;
-    width: 100vw;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5% 2%;
     background: linear-gradient(var(--main-color), var(--background-color));
     color: var(--contrast1);
 }
@@ -402,15 +402,22 @@ html, body, #root{
     flex-direction: column;
     gap: 3rem;
     width: 80%;
+    height: auto;
+}
+
+.section-title{
+    font-size: 4rem;
 }
 
 .topics-list {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    display: flex;  
     gap: 2rem;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .topic-card {
@@ -427,8 +434,8 @@ html, body, #root{
     border-radius: 20px;
     border: 2px solid rgba(255, 255, 255, 0.7);
     box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
-    width: auto;
-    height: 50vh;
+    aspect-ratio: 2/1;
+    width: 100%;
     padding: 1.5rem;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -459,18 +466,16 @@ html, body, #root{
 
 .topic-card img {
     aspect-ratio: 1/1;
-    height: 400px;
+    height: 800px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 1rem;
     border: 3px solid var(--contrast2) ;
 }
 
-
-
 .cardDetailsDiv{
     width: 40%;
-    transform: scale(1.5);
+    transform: scale(2);
 }
 
 .detail-link {
@@ -777,7 +782,83 @@ html, body, #root{
     }
 }
 
-@media (min-width: 1080px) {
+@media (max-width: 2422px) {
+    .topic-card img {
+        aspect-ratio: 1/1;
+        height: 800px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        border: 3px solid var(--contrast2) ;
+    }
+
+    .cardDetailsDiv{
+        transform: scale(1.5);
+    }
+}
+
+@media (max-width: 1998px) {
+    .topic-card img {
+        aspect-ratio: 1/1;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        border: 3px solid var(--contrast2) ;
+    }
+
+    .cardDetailsDiv{
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 1282px) {
+    .topic-card img {
+        aspect-ratio: 1/1;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        border: 3px solid var(--contrast2) ;
+    }
+
+    .cardDetailsDiv{
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 970px) {
+    .topic-card img {
+        aspect-ratio: 1/1;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        border: 3px solid var(--contrast2) ;
+    }
+
+    .cardDetailsDiv{
+        transform: scale(0.7);
+    }
+}
+
+@media (max-width: 662) {
+    .topic-card img {
+        aspect-ratio: 1/1;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        border: 3px solid var(--contrast2) ;
+    }
+
+    .cardDetailsDiv{
+        transform: scale(0.6);
+    }
+}
+
+
+@media (min-width: 1169px) {
     .mobileNavLinks{
         display: none !important;
     }
@@ -797,7 +878,13 @@ html, body, #root{
     }
 
     #homeSection{
+        margin-top: 20px;
+        height: 25vh;
         width: 800px;
+    }
+
+    .scrollArrow{
+        display: none;
     }
 
     #homeSection p{
@@ -807,7 +894,7 @@ html, body, #root{
     }
 
     #homeSection h1{
-        font-size: 7rem;
+        font-size: 6rem;
     }
 
     .particle:nth-child(n + 8){
@@ -825,7 +912,7 @@ html, body, #root{
     }
 
     #homeSection h1{
-        font-size: 6rem;
+        font-size: 5rem;
     }
 }
 
@@ -839,7 +926,7 @@ html, body, #root{
     }
 
     #homeSection h1{
-        font-size: 5rem;
+        font-size: 4rem;
     }
 }
 
@@ -848,6 +935,12 @@ html, body, #root{
         width: 450px;
         justify-content: flex-start;
         margin-top: 150px;
+        height: 10vh;
+    }
+
+    .section-title{
+        scale: 0.4;
+        width: auto;
     }
 
     #homeSection p{
@@ -855,7 +948,7 @@ html, body, #root{
     }
 
     #homeSection h1{
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .particle:nth-child(n + 5){
@@ -891,7 +984,7 @@ html, body, #root{
     }
 
     #homeSection h1{
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .logoTitleDiv{
