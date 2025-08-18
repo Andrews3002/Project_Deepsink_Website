@@ -536,6 +536,10 @@ html, body, #root{
     font-size: 3rem;
 }
 
+.research-detail p{
+    font-size: 2rem;
+}
+
 /* Mission Page with Glass Background */
 .mission-page {
     height: 60%; 

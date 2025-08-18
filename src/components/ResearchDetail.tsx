@@ -16,7 +16,6 @@ function ResearchDetail( { researchTopics }: researchProps) {
     <div className = "linkDetailsPage">
       <div className="research-detail">
         <h1>{topic.title}</h1>
-        <img src={topic.imageUrl} alt={topic.title} />
         <p>{topic.detail}</p>
       </div>
     </div>
