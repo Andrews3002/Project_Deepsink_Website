@@ -1,4 +1,4 @@
-import { useRef} from "react";
+import { useRef } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavLinks from "./components/NavLinks";
 import ResearchTopics from "./components/ResearchTopics";
