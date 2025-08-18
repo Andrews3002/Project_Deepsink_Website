@@ -1,35 +1,36 @@
 import { useState } from "react";
 
 interface NavLinksProps {
-    links: string[];
-    topics: string[];
+  links: { name: string; path: string }[];
+  topics: { id: number; title: string; summary: string; imageUrl: string; detailLink: string; detail: string }[];
 }
 
-const addNavLink = (topics: string[], link: string, index: number) => {
-    if (link === "Research Topics") {
+const addNavLink = (topics: { id: number; title: string; summary: string; imageUrl: string; detailLink: string; detail: string }[], link: { name: string; path: string }, index: number) => {
+    if (link.name == "Research Topics") {
         return (
         <li className="dropdownMenu" key={index}>
             <div className="dropdownMenuDiv">
-                <a href="#">{link}</a>
+                <a href={"#"}>{link.name}</a>
                 <img src="/src/assets/WhiteDropdownArrow.svg" alt="Dropdown Arrow" className="dropdownArrow"/>
             </div>
 
             <div className="dropdownContainer">
                 <ul className="dropdownLinks">
-                    {topics.map((subLink, subIndex) => (
+                    {topics.map((topic, subIndex) => (
                         <li className="dropdownLink" key={subIndex}>
-                            <a href="#">{subLink}</a>
+                            <a href={topic.detailLink}>{topic.title}</a>
                         </li>
                     ))}
                 </ul>
             </div>
         </li>
         );
-    } else {
+    } 
+    else {
         return (
-        <li className="defaultLink" key={index}>
-            <a href="#">{link}</a>
-        </li>
+            <li className="defaultLink" key={index}>
+                <a href={link.path}>{link.name}</a>
+            </li>
         );
     }
 };
@@ -61,17 +62,17 @@ function NavLinks({ links, topics }: NavLinksProps) {
 
             <ul className={`mobileNavLinks ${open ? "navActive" : ""}`}>
                 {links.map((link, index) => (
-                        link !== "Research Topics" ? (
+                        link.name !== "Research Topics" ? (
                             <li className="mobileNavLink" key={index}>
-                                <a href="#">{link}</a>
+                                <a href={link.path}>{link.name}</a>
                             </li>
                         ): null
                     )
                 )}
 
-                {topics.map((subLink, subIndex) => (
+                {topics.map((topic, subIndex) => (
                     <li className="mobileNavLink" key={subIndex}>
-                        <a href="#">{subLink}</a>
+                        <a href="#">{topic.title}</a>
                     </li>
                 ))}
             </ul>

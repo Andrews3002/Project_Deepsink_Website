@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
-
 interface ResearchTopic {
   id: number;
   title: string;
   summary: string;
   imageUrl: string;
-  detailLink: string; // URL to the detailed page
+  detailLink: string;
+  detail: string; // URL to the detailed page
 }
 
 interface ResearchTopicsProps {
@@ -24,11 +23,13 @@ function ResearchTopics({ topics }: ResearchTopicsProps) {
               alt={topic.title}
               className="topic-image"
             />
-            <h2>{topic.title}</h2>
-            <p>{topic.summary}</p>
-            <Link to={topic.detailLink} className="detail-link">
-              Read More
-            </Link>
+            <div className="cardDetailsDiv">
+              <h2>{topic.title}</h2>
+              <p>{topic.summary}</p>
+              <a href={topic.detailLink} className="detail-link">
+                Read More
+              </a>
+            </div>
           </li>
         ))}
       </ul>
