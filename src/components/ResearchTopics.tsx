@@ -18,11 +18,11 @@ function ResearchTopics({ topics }: ResearchTopicsProps) {
       <ul className="topics-list">
         {topics.map((topic) => (
           <li className="topic-card" key={topic.id}>
-            <img
+            {/* <img
               src={topic.imageUrl}
               alt={topic.title}
               className="topic-image"
-            />
+            /> */}
             <div className="cardDetailsDiv">
               <h2>{topic.title}</h2>
               <p>{topic.summary}</p>

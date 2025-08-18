@@ -474,7 +474,7 @@ html, body, #root{
 }
 
 .cardDetailsDiv{
-    width: 40%;
+    width: 80%;
     height: 90%;
     display: flex;
     flex-direction: column;
@@ -483,15 +483,16 @@ html, body, #root{
 }
 
 .cardDetailsDiv h2{
-    font-size: 3rem;
+    font-size: 7rem;
 }
 
 .cardDetailsDiv p{
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .cardDetailsDiv a{
-    transform: scale(1);
+    margin-top: 50px;
+    transform: scale(2);
 }
 
 .detail-link {
@@ -533,7 +534,8 @@ html, body, #root{
 }
 
 .research-detail h1{
-    font-size: 3rem;
+    font-size: 4rem;
+    margin-bottom: 20px;
 }
 
 .research-detail p{
@@ -542,7 +544,8 @@ html, body, #root{
 
 /* Mission Page with Glass Background */
 .mission-page {
-    height: 60%; 
+    height: auto !important; 
+    padding: 2%;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -572,13 +575,13 @@ html, body, #root{
 
 /* Contact Us Page */
 .contact-page {
-    height: 60%;
+    height: auto;
     width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5% 3%;
+    padding: 2%;
     background: rgba(255, 255, 255, 0.05);
     border: 2px solid rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(25px);
@@ -776,8 +779,10 @@ html, body, #root{
     justify-content: center;
     height: auto;
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
+
+
 
 @keyframes droppingParticles {
     0%{
@@ -818,6 +823,18 @@ html, body, #root{
 
     .homeTitleLine{
         justify-content: flex-start;
+    }
+
+    .mission-page p {
+        text-align: left;
+    }
+
+    .contact-page p{
+        text-align: left;
+    }
+
+    .contact-info p{
+        text-align: left;
     }
 
     #homeSection{
