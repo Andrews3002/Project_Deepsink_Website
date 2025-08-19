@@ -72,7 +72,7 @@ function NavLinks({ links, topics }: NavLinksProps) {
 
                 {topics.map((topic, subIndex) => (
                     <li className="mobileNavLink" key={subIndex}>
-                        <a href="#">{topic.title}</a>
+                        <a href={topic.detailLink}>{topic.title}</a>
                     </li>
                 ))}
             </ul>
