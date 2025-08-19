@@ -814,6 +814,9 @@ html, body, #root{
 }
 
 @media (max-width: 1169px) {
+    .section-title{
+        display: none;
+    }
     .navLinks {
         display: none !important;
     }

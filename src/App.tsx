@@ -285,4 +285,22 @@ function App() {
   )
 }
 
+const container = document.querySelector<HTMLElement>('.research-detail');
+const heading = document.querySelector<HTMLElement>('.research-detail h1');
+const content = document.querySelector<HTMLElement>('.research-detail p')
+
+
+function updateFont(): void {
+  if (!container || !heading || !content) return// safety check
+
+  const width = container.offsetWidth;
+
+  heading.style.fontSize = `${width*0.3}px`
+  content.style.fontSize = `${width*0.05}px`
+}
+
+window.addEventListener("resize", updateFont);
+
+updateFont();
+
 export default App;
