@@ -15,7 +15,7 @@ export function useResponsiveFont() {
     const updateFont = () => {
       const width = container.offsetWidth;
       heading.style.fontSize = `${width * 0.05}px`;
-      content.style.fontSize = `${width * 0.02}px`;
+      content.style.fontSize = `${width * 0.03}px`;
     };
 
     updateFont(); // run once on mount
