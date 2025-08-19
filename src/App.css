@@ -545,6 +545,7 @@ html, body, #root{
 
 /* Mission Page with Glass Background */
 .mission-page {
+    margin-top: 250px;
     height: auto !important; 
     padding: 2%;
     width: 80%;
@@ -576,6 +577,7 @@ html, body, #root{
 
 /* Contact Us Page */
 .contact-page {
+    margin-top: 150px;
     height: auto;
     width: 80%;
     display: flex;
@@ -635,7 +637,6 @@ html, body, #root{
 /* Responsive design */
 @media (max-width: 768px) {
     .contact-page {
-        margin: 30px 20px;
         padding: 10% 5%;
     }
     .contact-page h1 {
